@@ -39,6 +39,9 @@ ec2_region_name = config['ec2_region_name']
 ec2_region_endpoint = config['ec2_region_endpoint']
 keep = config['keep']
 
+if keep < 2:
+    raise AssertionError("it's really not a good idea to have less than two backups")
+
 region = RegionInfo(name=ec2_region_name, endpoint=ec2_region_endpoint)
 if aws_access_key:
         conn = EC2Connection(aws_access_key, aws_secret_key, region=region)
