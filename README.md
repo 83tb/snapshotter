@@ -1,7 +1,12 @@
-# snapshotter
+# Snapshotter
+"Python tool for AWS tag based volume snapshotting"
+
+## Configuration
 
 Rename default_config.py file to config.py.
 Set your API KEY/SECRET and tag_name inside this file.
+
+## Usage
 
 And then run
 
